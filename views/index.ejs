@@ -1,0 +1,288 @@
+<section>
+  <h3>чому саме</h3>
+  <h1>React</h1>
+  <small>
+    Доповідач: Євген Шемет<br />
+    email: yevhene@vntu.edu.ua<br />
+    github: <a href="http://github.com/yevhene/present-react">yevhene/present-react</a>
+  </small>
+</section>
+
+<section>
+  <h2>Що таке React?</h2>
+
+  <section>
+    <h3>A JavaScript library for building user interfaces</h3>
+    <small>Не каркас (framework), а бібліотека!</small>
+  </section>
+
+  <section>
+    <h3>Компоненти</h3>
+
+    <pre><code class="hljs" data-trim>
+class Greeting extends React.Component {
+  render() {
+    return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;;
+  }
+}
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>props</h3>
+
+    <pre><code class="hljs" data-trim>
+&lt;Greetings name="Василь" /&gt;
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>state</h3>
+
+    <pre><code class="hljs" data-trim>
+class Counter extends React.Component {
+  constructor() {
+    this.state = { i: 0 };
+  }
+
+  inc() {
+    this.setState({ i: this.state.i + 1 });
+  }
+
+  render() {
+    return &lt;button onClick={this.inc}&gt;{this.state.i}&lt;/button&gt;
+  }
+}
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>JSX</h3>
+
+    <pre><code class="hljs" data-trim>
+&lt;h1 className="greeting"&gt;Hello&lt;/h1&gt;
+    </code></pre>
+
+    <small>===&gt;</small>
+
+    <pre><code class="hljs" data-trim>
+React.createElement(
+  'h1',
+  {className: 'greeting'},
+  'Hello'
+)
+    </code></pre>
+  </section>
+</section>
+
+<section>
+  <h2>Переваги</h2>
+
+  <section>
+    <h3>Virtual DOM</h3>
+  </section>
+
+  <section>
+    <h3>Fiber</h3>
+
+    <a href="https://claudiopro.github.io/react-fiber-vs-stack-demo/stack.html" >Before</a>
+    <br />
+    <img src="img/perf-not-fiber.png" />
+  </section>
+
+  <section>
+    <h3>Fiber</h3>
+
+    <a href="https://claudiopro.github.io/react-fiber-vs-stack-demo/fiber.html">After</a>
+    <br />
+    <img src="img/perf-fiber.png" />
+  </section>
+
+  <section>
+    <h3>Server-side rendering</h3>
+  </section>
+</section>
+
+<section>
+  <h2>Багатоплатформність</h2>
+
+  <section>
+    <h3>DOM</h3>
+
+    <a href="https://github.com/facebook/react/tree/master/packages/react-dom">react-dom</a>
+  </section>
+
+  <section>
+    <h3>Mobile</h3>
+
+    <a href="https://github.com/facebook/react-native">react-native</a>
+  </section>
+
+  <section>
+    <h3>Terminal</h3>
+    <a href="https://github.com/Yomguithereal/react-blessed">react-blessed</a>
+    <br />
+
+    <img src="img/react-blessed.gif" />
+  </section>
+
+  <section>
+    <h3>VR</h3>
+    <a href="https://github.com/ngokevin/aframe-react">aframe-react</a>
+    <br />
+
+    <img src="img/react-aframe.gif" />
+  </section>
+
+  <section>
+    <h3>Arduino</h3>
+    <a href="https://github.com/iamdustan/react-hardware">react-hardware</a>
+    <br />
+
+    <img src="img/react-hardware.gif" />
+  </section>
+</section>
+
+<section>
+  <h2>Контроль</h2>
+
+  <section>
+    <h3>lifecycle methods</h3>
+
+    <ul>
+      <li>componentWillMount</li>
+      <li>componentWillReceiveProps</li>
+      <li>shouldComponentUpdate</li>
+      <li>componentWillUpdate</li>
+      <li>componentDidMount</li>
+      <li>componentDidUpdate</li>
+      <li>componentWillUnmount</li>
+      <li>componentDidCatch</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>PropTypes</h3>
+
+    <pre><code class="hljs" data-trim>
+Greeting.propTypes = {
+  name: React.PropTypes.string
+};
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>unidirectional data flow</h3>
+
+    <img src="img/react.svg" />
+  </section>
+</section>
+
+<section>
+  <h2>Архітектура Flux</h2>
+
+  <section>
+    <img src="img/flux-architecture.png">
+  </section>
+
+  <section>
+    <h3>Flux</h3>
+
+    <img src="img/flux.svg">
+  </section>
+
+  <section>
+    <h3>Redux</h3>
+
+    <img src="img/redux.svg">
+  </section>
+</section>
+
+<section>
+  <h2>Інфраструктура</h2>
+
+  <section>
+    <h3>Маршрутизація</h3>
+
+    <ul>
+      <li><a href="https://github.com/ReactTraining/react-router">react-router</li>
+      <li><a href="https://github.com/reactjs/react-router-redux">react-router-redux</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Тестування</h3>
+
+    <ul>
+      <li><a href="https://github.com/facebook/jest">jest</li>
+      <li><a href="https://github.com/airbnb/enzyme">enzyme</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Форми</h3>
+
+    <ul>
+      <li><a href="https://github.com/tannerlinsley/react-form">react-form</li>
+      <li><a href="https://github.com/christianalfoni/formsy-react">formsy-react</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Графіка</h3>
+
+    <ul>
+      <li><a href="https://github.com/Flipboard/react-canvas">react-canvas</li>
+      <li><a href="https://github.com/reactjs/react-art">react-art</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Підбірки</h3>
+
+    <ul>
+      <li><<a href="https://github.com/enaqx/awesome-react">awesome-react</a></li>
+      <li><a href="https://github.com/brillout/awesome-react-components">awesome-react-components</a></li>
+    </ul>
+  </section>
+</section>
+
+<section>
+  <h2>Недоліки</h2>
+
+  <section>
+    <h3>JSX</h3>
+  </section>
+
+  <section>
+    <h3>Це лише бібліотека</h3>
+  </section>
+
+  <section>
+    <h3>Важко почати</h3>
+  </section>
+</section>
+
+<section>
+  <h2>Як почати</h2>
+
+  <section>
+    <h3>Поступово</h3>
+  </section>
+
+  <section>
+    <h3>Оболонки</h3>
+
+    <a href="https://github.com/facebookincubator/create-react-app">create-react-app</a>
+  </section>
+
+  <section>
+    <h3>Генератори</h3>
+
+    <a href="http://yeoman.io">yeoman.io</a>
+  </section>
+</section>
+
+<section>
+  <h2>Дякую</h2>
+</section>

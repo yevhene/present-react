@@ -1,0 +1,26 @@
+{
+  "name": "present-react",
+  "version": "1.0.0",
+  "main": "app.js",
+  "description": "React Presentation",
+  "homepage": "https://present-react.herokuapp.com",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": {
+    "name": "Yevhen Shemet",
+    "email": "yevhene@gmail.com",
+    "web": "https://github.com/yevhene"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yevhene/present-react.git"
+  },
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "~4.14.0",
+    "express-ejs-layouts": "^2.3.1",
+    "glob": "^7.1.2"
+  },
+  "license": "MIT"
+}
