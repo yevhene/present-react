@@ -63,7 +63,7 @@ class Counter extends React.Component {
 &lt;h1 className="greeting"&gt;Hello&lt;/h1&gt;
     </code></pre>
 
-    <small>===&gt;</small>
+    <div>&rArr;</div>
 
     <pre><code class="hljs" data-trim>
 React.createElement(
@@ -83,6 +83,12 @@ React.createElement(
   </section>
 
   <section>
+    <h3>Ізоморфність</h3>
+
+    <p>Server-side rendering</p>
+  </section>
+
+  <section>
     <h3>Fiber</h3>
 
     <a target="_blank" href="https://claudiopro.github.io/react-fiber-vs-stack-demo/stack.html" >Before</a>
@@ -99,7 +105,17 @@ React.createElement(
   </section>
 
   <section>
-    <h3>Server-side rendering</h3>
+    <h3>Fiber *</h3>
+
+    <h4>Приорітизація оновлень</h4>
+    <ul>
+      <li>Синхронний</li>
+      <li>Задача (передує наступному "тіку")</li>
+      <li>Анімація (передує наступному "кадру")</li>
+      <li>Високий</li>
+      <li>Низький</li>
+      <li>Схований (не на єкрані)</li>
+    </ul>
   </section>
 </section>
 
@@ -107,19 +123,23 @@ React.createElement(
   <h2>Багатоплатформність</h2>
 
   <section>
-    <h3>DOM</h3>
+    <h3>Браузер</h3>
 
     <a target="_blank" href="https://github.com/facebook/react/tree/master/packages/react-dom">react-dom</a>
   </section>
 
   <section>
-    <h3>Mobile</h3>
+    <h3>Мобільні</h3>
 
     <a target="_blank" href="https://github.com/facebook/react-native">react-native</a>
+    <br />
+
+    <img src="img/react-native.gif" />
   </section>
 
   <section>
-    <h3>Terminal</h3>
+    <h3>Термінал</h3>
+
     <a target="_blank" href="https://github.com/Yomguithereal/react-blessed">react-blessed</a>
     <br />
 
@@ -127,7 +147,8 @@ React.createElement(
   </section>
 
   <section>
-    <h3>VR</h3>
+    <h3>Віртуальна реальність</h3>
+
     <a target="_blank" href="https://github.com/ngokevin/aframe-react">aframe-react</a>
     <br />
 
@@ -135,7 +156,8 @@ React.createElement(
   </section>
 
   <section>
-    <h3>Arduino</h3>
+    <h3>Залізо</h3>
+
     <a target="_blank" href="https://github.com/iamdustan/react-hardware">react-hardware</a>
     <br />
 
@@ -172,7 +194,7 @@ Greeting.propTypes = {
   </section>
 
   <section>
-    <h3>unidirectional data flow</h3>
+    <h3>Unidirectional Hierarchic Data Flow</h3>
 
     <img src="img/react.svg" />
   </section>
@@ -183,6 +205,8 @@ Greeting.propTypes = {
 
   <section>
     <img src="img/flux-architecture.png">
+
+    <i>mind framework</i>
   </section>
 
   <section>
